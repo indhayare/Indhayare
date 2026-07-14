@@ -1,0 +1,195 @@
+/* --- Design Framework Settings --- */
+:root {
+    --bg-light: #f8fafc;
+    --card-bg: #ffffff;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --accent-color: #2563eb;
+    --border-color: #e2e8f0;
+    --font-stack: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-main);
+    font-family: var(--font-stack);
+    line-height: 1.5;
+    padding: 2rem 1rem;
+}
+
+/* --- Container Frame --- */
+.cv-container {
+    max-width: 950px;
+    margin: 0 auto;
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    padding: 3rem;
+}
+
+/* --- Top Header Structure --- */
+.cv-header {
+    text-align: center;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.cv-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-main);
+    letter-spacing: -0.5px;
+    margin-bottom: 0.25rem;
+}
+
+.cv-header .subtitle {
+    font-size: 1.1rem;
+    color: var(--accent-color);
+    font-weight: 500;
+    margin-bottom: 1.25rem;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.contact-info i {
+    color: var(--accent-color);
+    margin-right: 0.4rem;
+}
+
+/* --- Layout Grid --- */
+.cv-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 3rem;
+}
+
+.cv-section {
+    margin-bottom: 2.5rem;
+}
+
+.section-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-main);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.section-title i {
+    color: var(--accent-color);
+    font-size: 1.1rem;
+}
+
+/* --- Inner Element Configurations --- */
+.project-item {
+    margin-bottom: 1.5rem;
+}
+
+.project-item h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+
+.project-item p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    text-align: justify;
+}
+
+.project-item em {
+    color: var(--text-main);
+    font-weight: 500;
+    font-style: normal;
+    display: block;
+    margin-top: 0.25rem;
+}
+
+.edu-item {
+    margin-bottom: 1.25rem;
+}
+
+.edu-item h4 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.edu-institution {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.edu-date {
+    font-size: 0.85rem;
+    color: var(--accent-color);
+    font-weight: 500;
+}
+
+/* --- Sidebar Bullet Style Overrides --- */
+.skills-list, .lang-list {
+    list-style: none;
+}
+
+.skills-list li {
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-color);
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.lang-list li {
+    padding: 0.4rem 0;
+    border-bottom: 1px solid var(--bg-light);
+    font-size: 0.95rem;
+}
+
+/* --- Page Footer --- */
+.cv-footer {
+    border-top: 1px solid var(--border-color);
+    padding-top: 1.5rem;
+    margin-top: 1rem;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+/* --- Mobile Breakpoints --- */
+@media (max-width: 768px) {
+    .cv-container {
+        padding: 1.5rem;
+    }
+    .cv-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .contact-info {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+    }
+}
